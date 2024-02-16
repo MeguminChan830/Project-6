@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css'
 import ProductListing from './containers/ProductListing'
 import Header from './containers/Header'
@@ -7,13 +7,13 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <Router>
-        <Header/>
-        <Switch>
-          <Route path='/' exact component={ProductListing}/>
-          <Route path='/product/:productId' component={ProductDetails}/>
-          <Route>404 Not Found!</Route>
-        </Switch>
+      <Routes>
+          <Route path='/' element={<ProductListing/>}/>
+          <Route path='/product/:productId' element={<ProductDetails/>}/>
+          <Route path="*" element={<h1>404 Not Found!</h1>}/>
+      </Routes>
       </Router>
     </div>
   )

@@ -1,80 +1,84 @@
-* {
-  font-family: "Roboto", sans-serif;
-  padding: 0;
+body {
+  box-sizing: border-box;
+  background-color: #eee;
+  /* display: inline; */
   margin: 0;
+  padding: 0;
+  outline: none;
 }
-.ui.cards > .card > .image {
-  height: 250px;
-  padding: 20px;
-  background: #fff;
-  margin: auto;
+.shop h2 {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 83, 83),
+    rgb(255, 255, 60),
+    #5fff51
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5em;
 }
-.ui.cards > .card > .content > .header {
-  height: 100%;
-  max-width: 100%;
-  width: auto;
+.shop {
+  text-align: center;
+  border: solid 10px #d9ff2e;
+  background-image: linear-gradient(to right, #ff3f3f, #16f7ff);
 }
-.ui.cards > .card > .content > .description {
-  height: 36px;
-  margin-bottom: 0px;
-  overflow: hidden;
+.listings img {
+  height: 100px;
+  width: 100px;
+  border: solid 10px #cc0;
+  border-radius: 0px 10px 10px 0px;
 }
-.ui.cards > .card .meta.price {
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #333;
-  font-weight: 600;
+.card {
+  display: flex;
+  flex-direction: row;
+  line-height: 30px;
+  border: solid 5px orange;
+  border-left: groove 10px #5fff51;
 }
-.ui.cards > .card .meta.price > a {
-  font-size: 1.3rem;
-  color: #222;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
 }
-.ui.menu.fixed {
-  height: 60px;
-  padding-top: 15px;
+.link {
+  text-decoration: none;
+  color: gray;
 }
-.ui.grid.container {
-  margin-top: 45px;
+.details {
+  display: flex;
+  flex-direction: row;
+  line-height: 30px;
+  border: solid 5px orange;
+  border-left: groove 10px #5fff51;
+  position: relative;
 }
-.ui.grid > .row {
-  background: #fff;
+.details .content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
 }
-.ui.grid > .row > .column.lp {
-  padding: 20px 40px 20px 20px;
-  align-self: flex-start !important;
+.details .title {
+  position: absolute;
+  top: 0;
 }
-.ui.grid > .row > .column.rp {
-  padding: 20px 20px 20px 40px;
-  text-align: left;
-  align-self: flex-start !important;
+.details button {
+  border: solid 10px #0ff;
+  font-size: 1.5em;
+  border-radius: 10px;
+  color: red;
+  margin-left: auto;
+  margin-right: auto;
+  transform: 0.2s ease;
 }
-.ui.grid > .row > .column > img,
-.ui.grid > .row > img {
-  height: 100%;
+.details .desc {
+  color: #444;
 }
-.ui.placeholder .header:not(:first-child):before,
-.ui.placeholder .image:not(:first-child):before,
-.ui.placeholder .paragraph:not(:first-child):before {
-  display: none;
+.details .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.ui.label,
-.ui.labels .label {
-  font-size: 22px;
-}
-.column.rp h1 {
-  color: #333;
-}
-.column.rp p {
-  font-size: 18px;
-  color: #777;
-}
-.ui.placeholder.segment .column .button,
-.ui.placeholder.segment .column .field,
-.ui.placeholder.segment .column textarea,
-.ui.placeholder.segment .column > .ui.input {
-  background-color: #ff3e6c;
-  border: 1px solid #ff3e6c;
-  color: #fff;
-  font-size: 18px;
-  margin-left: 0;
+.details button:hover {
+  transform: scale(0.95);
 }

@@ -1,6 +1,6 @@
 import React, {useEffect, useCallback, useMemo} from 'react'
 import axios from 'axios' 
-import {useDispatch, useSelector} from ".../redux/actions/productsActions"
+import {useDispatch, useSelector} from "react-redux"
 import ProductComponent from './ProductComponent'
 import {setProducts} from "../redux/actions/productsActions"
 const ProductPage =()=>{
@@ -20,7 +20,7 @@ const ProductPage =()=>{
         
     }, [])
     return (
-        <div className="ui grid container">
+        <div className="listings">
             <ProductComponent/>
         </div>
     )
